@@ -31,10 +31,12 @@ function App() {
   return (
     <div className='text-center bg-black text-white mt-50 mx-auto w-[50%] h-1/2 border-2 border-gray-500 p-5 rounded-lg '>
       <h1 ref={header} className='text-center my-4 text-xl md:text-2xl '>Password Generator</h1>
-      <input type="text" placeholder='Password' readOnly className='border-2' value={password}/>
-      <button className='bg-green-500 hover:bg-green-700 border-green-500 border-2 text-white p-2 m-2 rounded-lg cursor-pointer ' onClick={(e)=>navigator.clipboard.writeText(password)}>Copy</button>
+      <div className='flex flex-col justify-center items-center'>
+        <input type="text" placeholder='Password' readOnly className='border-2 w-1/2 h-auto' value={password}/>
+        <button className='bg-green-500 hover:bg-green-700 border-green-500 border-2 text-white p-2 m-2 rounded-lg cursor-pointer ' onClick={(e)=>navigator.clipboard.writeText(password)}>Copy</button>
+      </div>
       <div className='flex flex-col justify-centre items-center mt-5'>
-        <input className='w-1/2' type="Range" max={100} min={4} onChange={(e)=>{setlength(e.target.value)}}/>
+        <input type="Range" max={100} min={4} onChange={(e)=>{setlength(e.target.value)}}/>
         <label>length({length})</label>
         <input type="checkbox" onChange={()=>{setcharacter((prev)=>!prev)}}/>
         <label>Character</label>
