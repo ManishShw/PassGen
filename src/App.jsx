@@ -36,7 +36,7 @@ function App() {
         <button className='bg-green-500 hover:bg-green-700 border-green-500 border-2 text-white p-2 m-2 rounded-lg cursor-pointer ' onClick={(e)=>navigator.clipboard.writeText(password)}>Copy</button>
       </div>
       <div className='flex flex-col justify-centre items-center mt-5'>
-        <input type="Range" max={100} min={4} onChange={(e)=>{setlength(e.target.value)}}/>
+        <input className='w-half' type="Range" max={100} min={4} onChange={(e)=>{setlength(e.target.value)}}/>
         <label>length({length})</label>
         <input type="checkbox" onChange={()=>{setcharacter((prev)=>!prev)}}/>
         <label>Character</label>
