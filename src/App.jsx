@@ -32,15 +32,25 @@ function App() {
   return (
     <>
     {login ? (
+<<<<<<< HEAD
+      <button className='flex justify-end ml-auto bg-red-500 hover:bg-red-700 border-red-500 border-2 text-white p-2 m-2 rounded-lg cursor-pointer ' onClick={() => setLogin(!login)}>Logout</button>
+    ) : (
+      <button className='flex justify-end ml-auto bg-blue-500 hover:bg-blue-700 border-blue-500 border-2 text-white p-2 m-2 rounded-lg cursor-pointer ' onClick={() => setLogin(!login)}>Login</button>
+=======
       <button onClick={() => setLogin(!login)}>Logout</button>
     ) : (
       <button onClick={() => setLogin(!login)}>Login</button>
+>>>>>>> e953faa7af73af15fdb37fdbdc823d178bd99a89
     )}
     <div className='text-center bg-black text-white mt-50 mx-auto w-[50%] h-1/2 border-2 border-gray-500 p-5 rounded-lg '>
       <h1 ref={header} className='text-center my-4 text-xl md:text-2xl '>Password Generator</h1>
       <div className='flex flex-col justify-center items-center'>
         <input type="text" placeholder='Password' readOnly className='border-2 w-1/2 h-auto' value={password}/>
+<<<<<<< HEAD
+        <button className={`bg-green-500 hover:bg-green-700 border-green-500 border-2 text-white p-2 m-2 rounded-lg ${login ? "cursor-pointer" : "cursor-not-allowed"}`} onClick={(e)=>navigator.clipboard.writeText(password) } disabled={!login}>
+=======
         <button className='}bg-green-500 hover:bg-green-700 border-green-500 border-2 text-white p-2 m-2 rounded-lg cursor-pointer ' onClick={(e)=>navigator.clipboard.writeText(password) } disabled={!login}>
+>>>>>>> e953faa7af73af15fdb37fdbdc823d178bd99a89
           Copy
         </button>
       </div>
